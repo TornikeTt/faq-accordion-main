@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --color1: hsl(0, 0%, 100%);
+    --color2: hsl(275, 100%, 97%);
+    --color3: hsl(293, 100%, 30%);
+    --color4: hsl(292, 42%, 14%);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: "Work Sans", sans-serif;
+    background-color: var(--color2);
+}
+
+.backgroundImage {
+    width: 100%;
+    height: 200px;
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+    background-size: cover;
+}
+
+main {
+    width: 480px;
+    height: 400px;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: var(--color1);
+}
+
+/* HEADER */
+header {
+    width: 90%;
+    height: 20%;
+
+    display: flex;
+    align-items: center;
+
+    margin: auto;
+}
+
+header img {
+    width: 30px;
+    height: 30px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+/*Body of FAQs*/
+.FAQs_body {
+    width: 90%;
+    height: 80%;
+
+    margin: auto;
+    overflow: hidden;
+}
+
+.FAQs_body hr {
+    border-width: 1px;
+    border-color: var(--color1);
+    margin-top: 15px;
+    opacity: 0.2;
+}
+
+.faq-item {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.header-of-faqItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-of-faqItem p {
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header-of-faqItem p:hover {
+    color: var(--color3);
+}
+
+.header-of-faqItem img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    margin: 20px 0px;
+    font-size: 13px;
+    line-height: 19px;
+    color: rgb(196, 192, 192);
+}
+
+.active {
+    display: block;
+}
+
+/* for smaller screen */
+@media (max-width: 500px) {
+    .backgroundImage {
+        background-image: url("./assets/images/background-pattern-mobile.svg");
+    }
+    main {
+        width: 300px;
+        height: 480px;
+    }
+
+    .header-of-faqItem p {
+        width: 200px;
+    }
+
+    .faq-answer {
+        width: 250px;
+    }
+}
