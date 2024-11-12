@@ -24,19 +24,3 @@ items.forEach((item) => {
         }
     });
 });
-
-/* 
-
-
-        if (e.target === faq_question || e.target === faq_button) {
-            let checking = faq_answer.classList.toggle("active");
-
-            if (checking) {
-                faq_button.src = "./assets/images/icon-minus.svg";
-            } else {
-                faq_button.src = "./assets/images/icon-plus.svg";
-            }
-        }
-
-
-*/
