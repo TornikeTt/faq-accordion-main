@@ -103,15 +103,19 @@ header h1 {
 }
 
 .faq-answer {
-    display: none;
-    margin: 20px 0px;
+    height: 0px;
+    overflow: hidden;
+
     font-size: 13px;
     line-height: 19px;
     color: rgb(196, 192, 192);
+
+    transition: 0.4s;
 }
 
 .active {
-    display: block;
+    height: 70px;
+    margin: 20px 0px;
 }
 
 /* for smaller screen */
@@ -122,6 +126,7 @@ header h1 {
     main {
         width: 300px;
         height: 480px;
+        transition: width 0.4s;
     }
 
     .header-of-faqItem p {
@@ -130,5 +135,9 @@ header h1 {
 
     .faq-answer {
         width: 250px;
+    }
+
+    .active {
+        height: 100px;
     }
 }
